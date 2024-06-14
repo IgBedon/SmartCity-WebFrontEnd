@@ -42,7 +42,7 @@ export default function Signup() {
 
     return (
         <div className="flex bg-violet-800 min-h-screen items-center justify-center">
-            <div className="flex items-center justify-center bg-slate-50 w-2/6 py-10 mt-12">
+            <div className="flex items-center justify-center bg-slate-50 w-2/6 py-10 mt-12 rounded-2xl">
                 <form action="">
                     <div className="">
                         <h1 className="text-5xl flex justify-center mb-5">Crie sua conta!</h1>
@@ -60,7 +60,7 @@ export default function Signup() {
 
                         <div className="flex justify-center m-auto mt-5">
                             <span className="text-gray-500">Já possui conta?</span>
-                            <Link to="/login" className="text-violet-800 ml-1">Clique aqui</Link>
+                            <Link to="/" className="text-violet-800 ml-1">Clique aqui</Link>
                         </div>
                     </div>
                 </form>

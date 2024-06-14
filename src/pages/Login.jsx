@@ -34,7 +34,7 @@ export default function Login() {
 
     return (
         <div className="flex bg-violet-800 min-h-screen items-center justify-center">
-            <div className="flex items-center justify-center bg-slate-50 w-2/6 py-12">
+            <div className="flex items-center justify-center bg-slate-50 w-2/6 py-12 rounded-2xl">
                 <form onSubmit={(e) => { e.preventDefault(); fetchToken(); }}>
                     <div className="">
                         <h1 className="text-5xl flex justify-center mb-5">Entre em sua conta!</h1>
