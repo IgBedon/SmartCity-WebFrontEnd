@@ -29,7 +29,7 @@ export default function Home() {
 
     const getSensores = async () => {
         try {
-            const response = await axios.get(`http://127.0.0.1:8000/api/sensores/?tipo=${escolha}`, {
+            const response = await axios.get(`http://Bedon.pythonanywhere.com/api/sensores/?tipo=${escolha}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -48,7 +48,7 @@ export default function Home() {
     const handleSensorChange = async (sensor) => {
         setSensor(sensor);
         try {
-            const response = await axios.post(`http://127.0.0.1:8000/api/${sensor.tipo.toLowerCase()}_filter/`, {
+            const response = await axios.post(`http://Bedon.pythonanywhere.com/api/${sensor.tipo.toLowerCase()}_filter/`, {
                 'sensor_id': sensor.id
             },
                 {

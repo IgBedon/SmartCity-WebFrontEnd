@@ -15,7 +15,7 @@ export default function Login() {
         if (username && password) {
             try {
                 const response = await axios.post(
-                    'http://127.0.0.1:8000/api/token/',
+                    'http://Bedon.pythonanywhere.com/api/token/',
                     {
                         username,
                         password
