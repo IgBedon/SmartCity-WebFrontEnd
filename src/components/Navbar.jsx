@@ -48,6 +48,10 @@ export default function CustomNavbar() {
         <NavbarItem>
           <Button className={`${location.pathname === "/home" ? 'text-white ml-2 bg-violet-800 px-6 py-2 rounded' : 'hidden'}`} onClick={() => logout()}>Sair</Button>
         </NavbarItem>
+
+        <NavbarItem>
+          <Link href="/home" className={`${location.pathname === "/sensors" ? 'text-violet-700 text-bold ml-2' : 'hidden'}`}>Voltar para o início</Link>
+        </NavbarItem>
       </NavbarContent>
     </Navbar>
   );

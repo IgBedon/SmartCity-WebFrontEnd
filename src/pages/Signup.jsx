@@ -10,13 +10,6 @@ export default function Signup() {
     const [token, setToken] = useState(null)
 
     const navigate = useNavigate();
-
-    useEffect(() => {
-        if (token) {
-            sessionStorage.setItem('token', token)
-        }
-    }, [token]);
-
     const createUser = async () => {
         try {
             const response = await axios.post('http://Bedon.pythonanywhere.com/api/create_user/',
@@ -31,7 +24,8 @@ export default function Signup() {
                     username,
                     password
                 })
-            setToken(resp.data.access)
+            sessionStorage.setItem('token', resp.data.access)
+            sessionStorage.setItem('token_refresh', resp.data.refresh)
             navigate("/home")
         }
         catch (error) {
